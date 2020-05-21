@@ -13,6 +13,10 @@
 - Week 4-6: İmplementation  
 - Week 7: Testing and Reporting  
   
+## Resources  
+- Python: ???
+- React: ???
+
 ## Action Items  
   
 ### Week 1: May 18-24  
