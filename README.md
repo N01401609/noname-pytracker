@@ -8,7 +8,7 @@
 - SASS
 - Design tools - Figma / Adobe XD
 
-## Project Timeline
+## Project Timeline (tentative)
 - Week 1-3: Learning & Designing  
 - Week 4-6: İmplementation  
 - Week 7: Testing and Reporting  
