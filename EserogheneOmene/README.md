@@ -1,7 +1,7 @@
 # Weekly Task List
 
 * Task List
-    - [ ] Learn Python Basics
+    - [x] Learn Python Basics
     - [ ] Checkout Django
     - [ ] Create wireframes for features
         - [ ] Feature 1 - Scheduler
@@ -12,7 +12,7 @@
 
 # [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/tree/master/EserogheneOmene/LearningNotes)
 
-* Create your own notes using markdown file
+* Personal notes and examples using markdown file
 
-# Code
-* All the code for the project and learning
+# [Code](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/tree/master/EserogheneOmene/ProjectCode)
+* My code will be found not only in the root for the project, but also in a separate folder to easily identify my contribution to the project
