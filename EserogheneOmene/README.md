@@ -10,7 +10,7 @@
 
 * Problems encountered and how was it resolved
 
-# Learning Notes
+# [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/tree/master/EserogheneOmene/LearningNotes)
 
 * Create your own notes using markdown file
 

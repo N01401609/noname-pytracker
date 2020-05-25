@@ -108,3 +108,4 @@ Classes can inherit other classes (the class ‘anotherClass’ is inheriting �
 ```python
 class anotherClass(myClass):
 ```
+
