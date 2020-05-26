@@ -2,9 +2,8 @@
 
 ## Learning Stack
   
-- Python + Flask/Django
-- React
-- MongoDB + NodeJS / MySQL
+- Python + Django
+- MySQL
 - SASS
 - Design tools - Figma / Adobe XD
 
@@ -15,14 +14,13 @@
   
 ## Resources  
 - Python: ???
-- React: ???
+- Django: https://www.djangoproject.com/start/
 
 ## Action Items  
   
 ### Week 1: May 18-24  
 - Start learning Python
 - Design Ideas
-- React Intro
   
 ### Week 2: May 25-31  
 - Project Setup
