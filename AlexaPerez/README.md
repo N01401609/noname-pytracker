@@ -9,7 +9,7 @@
     - [ ] Create wireframes
 
 ### Task Status
--
+- Complete wireframes on digital form
 
 ### Problems encountered and how was it resolved
-- 
+- Connecting Django on Python, following a tutorial I was able to install Django and setup the enviroment.
