@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f5b0f5a-2365-4699-90c8-e04eb7f9bd5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FaithMcQueen/LearningNotes/Python/HelloWorld.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaithMcQueen/ProjectCode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaithMcQueen/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +44,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FaithMcQueen/LearningNotes/Python" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -53,6 +61,7 @@
       <updated>1590472983108</updated>
       <workItem from="1590472984600" duration="43000" />
       <workItem from="1590473278706" duration="615000" />
+      <workItem from="1590500873421" duration="2322000" />
     </task>
     <servers />
   </component>
@@ -69,11 +78,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="98" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590503013670">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="98" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1590503013670" />
     <state x="457" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590473554873">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="457" y="247" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828@0.23.1440.828" timestamp="1590473554873" />
+    <state x="977" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1590502348724">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="977" y="251" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1590502348724" />
   </component>
 </project>
