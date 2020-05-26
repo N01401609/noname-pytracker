@@ -1,6 +1,6 @@
 # Weekly Task List
 
-### Task List
+## Task List
 
 * Week 1
     - [x] Setup development environment and IDE
@@ -17,9 +17,9 @@
 
 **Problems encountered and how was it resolved**
 
-### [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/blob/master/AndreaVillegasMayorga/LearningNotes/Python/HelloWorldwithDjango)
+## [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/blob/master/AndreaVillegasMayorga/LearningNotes/Python/HelloWorldwithDjango)
 
 * Notes of Hello World Excercise with Python and Django
 
-### [Code]()
+## [Code]()
 * This folder will contain my notes for individual contributions
