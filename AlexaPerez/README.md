@@ -2,13 +2,14 @@
   
 ### Task List (Week 1)
 
-- Install and setup Python + Django
-- work on hello world example
-- Create wireframes and ERD's
-- Work on design
+- [x] Install and setup Python + Django
+    - [x] Work on hello world example
+    - [x] Work on design
+    - [x] ERD's
+    - [ ] Create wireframes
 
 ### Task Status
-- Done
+-
 
 ### Problems encountered and how was it resolved
 - 
