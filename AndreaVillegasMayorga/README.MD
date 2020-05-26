@@ -10,7 +10,7 @@
         - [ ] Feature 2 - Progress Report
 * Task Status
 
-\*Wireframes still need to be translated from paper to invision\*
+     \*Wireframes still need to be translated from paper to invision\*
 
 * Problems encountered and how was it resolved
 
