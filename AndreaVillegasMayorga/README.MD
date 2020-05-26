@@ -1,6 +1,8 @@
 # Weekly Task List
 
-* Task List
+## Task List
+
+* Week 1
     - [x] Setup development environment and IDE
     - [x] Hello World Example with Django
     - [x] Create ERD Diagrams for features
