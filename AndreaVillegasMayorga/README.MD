@@ -25,5 +25,5 @@
 
 * Notes of learning how to print hello world with Django
 
-## [Code]()
+## [Code](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/tree/master/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld)
 * This folder will contain my notes for individual contributions
