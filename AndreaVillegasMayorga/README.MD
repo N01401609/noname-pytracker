@@ -10,11 +10,12 @@
     - [ ] Create wireframes for features
         - [ ] Feature 1 - Invoice
         - [ ] Feature 2 - Progress Report
-### Task Status
+ 
+ **Task Status**
 
 * Wireframes still need to be translated from paper to invision
 
-### Problems encountered and how was it resolved
+**Problems encountered and how was it resolved**
 
 ### [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/blob/master/AndreaVillegasMayorga/LearningNotes/Python/HelloWorldwithDjango)
 
