@@ -3,7 +3,6 @@
 ## Task List
 
 **Week 1**
-
     - [x] Setup development environment and IDE
     - [x] Hello World Example with Django
     - [x] Create ERD Diagrams for features
@@ -12,6 +11,7 @@
         - [ ] Feature 1 - Invoice
         - [ ] Feature 2 - Progress Report
  
+
 * Task Status
 
     Wireframes still need to be translated from paper to invision
