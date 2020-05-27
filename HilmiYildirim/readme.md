@@ -21,11 +21,11 @@ this feature will be a nice tool to keep extra information handy.
   
 ### ----- Week 1 -----
   
-**Learning Items**  
+**Learning Items & Notes**  
 - [x] Python Crash Course
 - [x] Django Hello World  
 
-**Action Items**  
+**Action Items & Task Status**  
 - [x] ERD  
 - [x] Wireframe  
 - [x] Submit Project Phase 1
@@ -33,11 +33,22 @@ this feature will be a nice tool to keep extra information handy.
   
 ### ----- Week 2 -----
   
-**Learning Items**  
+**Learning Items & Notes**
 - [ ] Django Lessons  
 - [ ] SASS Crash Course  
 
-**Action Items**  
+**Action Items & Task Status** 
 - [ ] Project Setup: PyCharm, Django, GitHub Repo, ...   
 - [ ] Submit Project Phase 2
 - [ ] Week 2 Group Meeting  
+  
+### ----- Week 3 -----
+  
+**Learning Items & Notes**
+- [ ]   
+- [ ] 
+
+**Action Items & Task Status** 
+- [ ]  
+- [ ] 
+- [ ] 
