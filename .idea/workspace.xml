@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f5b0f5a-2365-4699-90c8-e04eb7f9bd5f" name="Default Changelist" comment="" />
+    <list default="true" id="3f5b0f5a-2365-4699-90c8-e04eb7f9bd5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-and-learning-documentations-noname.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project-and-learning-documentations-noname.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,14 +82,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="98" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590503013670">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="70" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590520737802">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state x="70" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1590520737802" />
     <state x="98" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1590503013670" />
     <state x="457" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590473554873">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="457" y="247" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828@0.23.1440.828" timestamp="1590473554873" />
+    <state x="186" y="81" key="SettingsEditor" timestamp="1590519231200">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1590519231200" />
     <state x="977" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1590502348724">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

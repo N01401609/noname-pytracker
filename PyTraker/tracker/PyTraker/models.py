@@ -1,4 +1,5 @@
 from django.db import models
 
 # Create your models here.
-# for import the time
+class comments(models.Model):
+    
