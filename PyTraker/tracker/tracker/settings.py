@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ortcp7lkcr(czpyp49e8m9!qux$mekiod9r4!d^60t@*sfsc-5'
+SECRET_KEY = 'k*%okts+%4q&7ml+^tq&hq=iz-2ezp7qv1y!&hxyv@p!b32@v9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'projects.apps.ProjectsConfig'
 ]
 
 MIDDLEWARE = [
