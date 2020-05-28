@@ -19,27 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f5b0f5a-2365-4699-90c8-e04eb7f9bd5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-and-learning-documentations-noname.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project-and-learning-documentations-noname.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/contrib/flatpages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/contrib/flatpages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/template/smartif.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/template/smartif.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/utils/timezone.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/utils/timezone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/views/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/views/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndreaVillegasMayorga/ProjectCode/DjangoHelloWorld/venv/lib/python3.7/site-packages/django/views/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/contrib/flatpages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/contrib/flatpages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/template/smartif.py" beforeDir="false" afterPath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/template/smartif.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/utils/timezone.py" beforeDir="false" afterPath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/utils/timezone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/views/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/views/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/JazzoSandhu/Code/venv/Lib/site-packages/django/views/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/PyTraker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/tracker/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/tracker/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyTraker/tracker/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyTraker/tracker/tracker/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="3f5b0f5a-2365-4699-90c8-e04eb7f9bd5f" name="Default Changelist" comment="User Profiles created, sign up page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +69,28 @@
       <workItem from="1590473278706" duration="615000" />
       <workItem from="1590500873421" duration="2322000" />
     </task>
+    <task id="LOCAL-00001" summary="User Profiles created, sign up page">
+      <created>1590694065015</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590694065015</updated>
+    </task>
+    <task id="LOCAL-00002" summary="User Profiles created, sign up page">
+      <created>1590694171271</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590694171271</updated>
+    </task>
+    <task id="LOCAL-00003" summary="User Profiles created, sign up page">
+      <created>1590694180356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590694180356</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +107,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Profiles" />
+    <MESSAGE value="User Profiles created, sign up page" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profiles created, sign up page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="70" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590520737802">
@@ -126,10 +133,22 @@
     </state>
     <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1590619272728" />
     <state x="209" y="77" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590693034062" />
-    <state x="361" y="200" key="git4idea.merge.GitPullDialog" timestamp="1590693052273">
+    <state x="610" y="326" key="VCS.EditChangelistDialog" timestamp="1590694275179">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="200" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590693052273" />
+    <state x="610" y="326" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1590694275179" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590694086755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590694086755" />
+    <state x="485" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1590694196236">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1590694196236" />
+    <state x="361" y="200" key="git4idea.merge.GitPullDialog" timestamp="1590693958606">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="200" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590693958606" />
     <state x="977" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1590502348724">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
