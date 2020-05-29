@@ -1,4 +1,4 @@
-#Write Views that actually do something
+# Write Views that actually do something
 Each view is responsible for one of 2 things:
 - returning an HttpResponse object containing the content for the requested page
 - raising an exception such as Http404.
