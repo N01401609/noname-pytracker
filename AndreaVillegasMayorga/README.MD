@@ -39,7 +39,7 @@
  ## Task List
 
 * Week 3 
-    - [] Set up database as a group
+    - [ ] Set up database as a group
     - [x] Have functional invoices feature
 
 
