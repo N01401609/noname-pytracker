@@ -40,7 +40,7 @@
 
 * Week 3 
     - [ ] Set up database as a group
-    - [x] Have functional invoices feature
+    - [ ] Have functional invoices feature
 
 
 **Task Status**
