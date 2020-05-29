@@ -15,6 +15,7 @@ class Invoice(models.Model):
     due_date = models.DateTimeField('due date')
 
 
+
 # CLIENTS TABLE
 class Client(models.Model):
     client_name = models.CharField(max_length=200)
