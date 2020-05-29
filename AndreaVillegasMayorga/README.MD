@@ -7,14 +7,14 @@
     - [x] Hello World Example with Django
     - [x] Create ERD Diagrams for features
     - [x] Color Palettes and Logo Ideas
-    - [ ] Create wireframes for features
-        - [ ] Feature 1 - Invoice
-        - [ ] Feature 2 - Progress Report
+    - [x] Create wireframes for features
+        - [x] Feature 1 - Invoice
+        - [x] Feature 2 - Progress Report
  
 
 **Task Status**
 
-* Wireframes still need to be translated from paper to invision
+* Done
 
 **Problems encountered and how was it resolved**
  
