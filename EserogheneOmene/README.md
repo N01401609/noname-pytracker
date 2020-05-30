@@ -1,5 +1,20 @@
 # Weekly Task List
+## Week 2 
+* Task List
+    - [ ] Create styled views for Feature 1
+    - [x] Learn Python Basics
+    - [x] Checkout Django
+    - [ ] Create wireframes for features
+        - [x] Feature 1 - Scheduler
+        - [ ] Feature 2 - Calendar View
+# [Learning Notes](https://github.com/2020-Summer-HTTP5303-A/project-and-learning-documentations-noname/tree/master/EserogheneOmene/LearningNotes/Django)
 
+
+
+
+
+
+## Week 1
 * Task List
     - [x] Learn Python Basics
     - [ ] Checkout Django
