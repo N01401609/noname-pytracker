@@ -1,3 +1,7 @@
+* CODE IS ONLY FOR VIEWING PURPOSES 
+I've taken my code out for ease of identifying my features and contribution
+
+
 # Work Tracking System 
 A freelance work tracking system, with a timer that can track hours and holds a total that the user could charge for that work. Could also hold tasks and upcoming projects, for task management
 
