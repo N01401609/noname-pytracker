@@ -21,9 +21,26 @@ class Comments(models.Model):
     def __str__(self):
         return self.comment + ' ' + self.comment_date + ' : '+self.user
 
+
+class Clients(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
 class Projects(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=250)
+    clientID = models.ForeignKey(Clients, on_delete=models.CASCADE)
+    payRate = models.IntegerField()
+    startDate = models.DateTimeField()
+    dueDate = models.DateTimeField()
+
+    def __str__(self):
+        return self.name
 
 
 class Tasks(models.Model):
@@ -47,3 +64,9 @@ class ProjectNotes(models.Model):
     note = models.TextField(max_length=250)
     projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
 
+
+class Invoices(models.Model):
+    userID = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    dateCreated = models.DateTimeField()
+    dueDate = models.DateTimeField()
