@@ -21,4 +21,29 @@ class Comments(models.Model):
     def __str__(self):
         return self.comment + ' ' + self.comment_date + ' : '+self.user
 
+class Projects(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=250)
+
+
+class Tasks(models.Model):
+    projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=250)
+
+
+class Timers(models.Model):
+    startTime = models.DateTimeField()
+    endTime = models.DateTimeField()
+    taskID = models.ForeignKey(Tasks, on_delete=models.CASCADE)
+
+
+class TaskNotes(models.Model):
+    note = models.TextField(max_length=250)
+    taskID = models.ForeignKey(Tasks, on_delete=models.CASCADE)
+
+
+class ProjectNotes(models.Model):
+    note = models.TextField(max_length=250)
+    projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
 
