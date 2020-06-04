@@ -62,10 +62,16 @@ class TaskNotes(models.Model):
     note = models.TextField(max_length=250)
     taskID = models.ForeignKey(Tasks, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.note
+
 
 class ProjectNotes(models.Model):
     note = models.TextField(max_length=250)
     projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.note
 
 
 class Invoices(models.Model):

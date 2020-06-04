@@ -10,6 +10,10 @@ urlpatterns = [
     path('PyTraker/login', views.login_page, name="login"),
     path("PyTraker/logout", views.log_out, name="logout"),
     #path("PyTraker/invoice/<int:invoices_id>/", views.invoice_details, name ="invoice_details"),
-    path("PyTraker/invoice/<int:invoices_id>/", views.invoice, name="invoice")
+    path("PyTraker/invoice/<int:invoices_id>/", views.invoice, name="invoice"),
+    path("PyTraker/tasklist", views.tasklist, name="tasklist"),
+    path("PyTraker/task_detail", views.task_detail, name="task_detail"),
+    path("PyTraker/projects", views.projects, name="projects"),
+    path("PyTraker/project_detail", views.project_detail, name="project_detail"),
 
 ]
