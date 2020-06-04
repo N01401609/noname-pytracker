@@ -2,5 +2,7 @@
     {% csrf_token %}
     {{ user_form }}
     {{ profile_form }}
+
+    {{ form.errors }}
     <input type="submit" value="Sign up">
 </form>

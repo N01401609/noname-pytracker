@@ -22,12 +22,22 @@
 
 ### Task List (Week 3)
 
-- [ ] Continue working on Feature 1
-    - [ ] Get Login page working and profile set up
-- [ ] Get model working for feature 2
+- [x] Continue working on Feature 1
+    - [x] Get Login page working and profile set up
+- [x] Get model working for feature 2
+
+### Task Status
+- Completed.
+
+### Task List (Week 4)
+
+- [ ] Continue working on Feature 2
+- [ ] Get Views and forms done for Work Diary
+
 
 ### Task Status
 - Working.
 
 ### Problems encountered and how was it resolved
 - Working on the same  pycharm project we are finding some issues with the files not working, decided to each work on the project separate and then put it together.
+- Interpreter was giving problems but the team was able to figure to resolve it to be able to runserver.
