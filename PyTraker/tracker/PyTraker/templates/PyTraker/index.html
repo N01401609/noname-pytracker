@@ -1,1 +1,11 @@
+{% if user.is_authenticated %}
+{{ request.user }} |<a href="#" onClick="document.getElementById('logoutform').submit()"><button type="button">Logout</button></a>
+<form id="logoutform" method="POST" action="{% url 'PyTraker:logout' %}">
+{% csrf_token %}
+<input type="hidden">
+</form>
+{% else %}
+<a href="{% url 'PyTraker:sign_up' %}">Sign up</a> | <a href="{% url 'PyTraker:login' %}">login</a>
+{% endif %}
+
 <h1> Welcome {{user}} </h1>
