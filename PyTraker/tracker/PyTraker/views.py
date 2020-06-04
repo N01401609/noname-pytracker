@@ -9,7 +9,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 
 from .forms import UserForm, ProfileForm
-from.models import Invoices,Projects, Clients
+from .models import Invoices, Projects, Clients, Tasks, Timers
 
 
 @login_required
@@ -40,9 +40,11 @@ def log_out(request):
     return render(request, 'PyTraker/login.html')
 
 
-#Invoice View
-def invoice_details(request):
-    obj = Invoices.objects.get(id=1)
+# Invoice View
+
+def invoice(request, invoices_id):
+    obj = Invoices.objects.get(id=invoices_id)
+    tasks = Tasks.objects.filter(projectID_id=obj.projectID)
     context = {
         'invoice_id': obj.id,
         'client_name': obj.projectID.clientID.name,
@@ -53,11 +55,8 @@ def invoice_details(request):
         'user_email': obj.userID.email,
         'user_phone': obj.userID.phonenumber,
         'date_created': obj.dateCreated,
-        'due_date': obj.dueDate
-
+        'date_due': obj.dueDate,
+        'hourly_rate': obj.projectID.payRate,
+        'tasks_list': tasks,
     }
     return render(request, "PyTraker/invoice.html", context)
-
-def invoice(request):
-    return HttpResponse("Testing...")
-

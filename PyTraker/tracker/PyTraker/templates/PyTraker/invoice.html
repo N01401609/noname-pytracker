@@ -1,10 +1,64 @@
-<!doctype html>
-<html>
-<head>
-    <title> {{ obj.client_name}}</title>
-</head>
-<body>
-</body>
+{% extends 'PyTraker/base.html' %}
+{% block content %}
+    <h1>Invoices</h1>
+    <!-- Invoice Information-->
+    <div style="padding-bottom: 2em;">
+        <div>Invoice #{{ invoice_id }}</div>
+        <div>Invoice Date: {{ date_created }}</div>
+        <div>Due Date: {{ date_due }}</div>
+    </div>
+
+    <!-- User's Information -->
+    <div style="padding-bottom: 2em;">
+        <div>{{ user_fname }} {{ user_lname }}</div>
+        <div>{{ user_email }}</div>
+        <div>{{ user_phone }}</div>
+    </div>
+
+    <!-- Company's information -->
+    <div style="padding-bottom: 2em;">
+        <div>Bill to: </div>
+        <div>{{ client_name }}</div>
+        <div>{{ client_email }}</div>
+        <div>{{ client_phone }}</div>
+    </div>
+
+    <!-- Working with loops -->
+    <style>
+    table, td, th {
+        border: #222222 solid 1px;
+    }
+    th, td{
+        padding: 10px;
+    }
+    .task-list{
+        padding-top: 10px;
+        margin-left: 280px;
+
+    }
+
+    </style>
+    <table>
+        <tr>
+            <th >TASK</th>
+            <th>PRICE</th>
+            <th>HOURS</th>
+            <th>AMOUNT</th>
+        </tr>
+        {% for task in tasks_list %}
+        <tr>
+            <td>{{ task }}</td>
+            <td>{{ hourly_rate }}</td>
+            <td>2</td>
+            <td>{% widthratio hourly_rate 1 2 %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="task-list">
+        <div> SUBTOTAL: </div>
+        <div> TAX (13%):</div>
+        <div> BALANCE:</div>
+    </div>
 
 
-</html>
+{% endblock %}
