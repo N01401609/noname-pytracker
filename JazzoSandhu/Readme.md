@@ -12,6 +12,13 @@
 * create class in the models and run the migrations for creating the table
 * perform the read functionality and passing the values threw the url
 
+### Week - 3
+* create url/path for the html files
+* create form template
+* fetch the data from the url 
+* pass the data threw form Post or get tag
+* delete the object
+
 ## Learning Notes
 * notes from the python tutorials
 
