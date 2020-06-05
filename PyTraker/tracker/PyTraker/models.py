@@ -18,10 +18,6 @@ class Comments(models.Model):
     comment = models.CharField(max_length=2000)
     comment_date = models.DateTimeField('commented date')
 
-    def __str__(self):
-        return self.comment + ' ' + self.comment_date + ' : '+self.user
-
-
 class Clients(models.Model):
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)

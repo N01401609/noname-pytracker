@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
 from django.contrib.auth.models import User
@@ -8,8 +8,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .forms import UserForm, ProfileForm
-from .models import Invoices, Projects, Clients, Tasks, Timers
+from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm
+from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
 
 @login_required
 def home(request):
@@ -83,3 +83,43 @@ def invoice(request, invoices_id):
         'tasks_list': tasks,
     }
     return render(request, "PyTraker/invoice.html", context)
+
+#comment page
+def comment_view(request):
+    obj = Comments.objects.all()
+    context ={
+        'object': obj
+    }
+    return render(request, "PyTraker/comment_form.html",context)
+
+def comment_detail_view(request, comment_id):
+    obj = Comments.objects.get(id=comment_id)
+    context = {
+        'comment': obj
+    }
+    return render(request, "PyTraker/comment_detail.html", context)
+
+def comment_create_view(request):
+    initial_data = {
+        'user': request.user.is_authenticated
+    }
+    my_form = CommentForm(request.POST or None, initial=initial_data)
+    comments = Comments.objects.all()
+    if my_form.is_valid():
+       my_form.save()
+       my_form = CommentForm()
+    context = {
+       'form': my_form,
+        'object':comments
+    }
+    return render(request, "PyTraker/comment_form.html", context)
+
+def comment_delete(request, comment_id):
+    obj = get_object_or_404(Comments, id=comment_id)
+    if request.method == "POST":
+        obj.delete()
+        return redirect('../../')
+    context = {
+        "object":obj
+    }
+    return render(request, "PyTraker/comment_delete.html", context)

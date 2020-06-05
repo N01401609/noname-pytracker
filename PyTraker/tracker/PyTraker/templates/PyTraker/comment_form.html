@@ -1,0 +1,24 @@
+
+
+{% if object %}
+    {% for comment in object %}
+    <ul>
+        <li><h2><a href="/PyTraker/comments/{{ comment.id }}">{{ comment.comment }}</a></h2></li>
+        <li><p>{{ comment.user.firstname }} {{comment.user.lastname }}</p></li>
+        <li><p>{{ comment.comment_date }}</p></li>
+    </ul>
+
+    {% endfor %}
+{% else %}
+<h2>You don't have any comment for display </h2>
+<!-- for django to stop the if else analysis -->
+{% endif %}
+<h2>Add your comments here!</h2>
+{% block content %}
+<form method="post" action="">
+    {% csrf_token %}
+    User : {{ user }}
+    {{ form.as_p }}
+    <input type="submit" value="Comment" />
+</form>
+{% endblock %}
