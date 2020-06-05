@@ -1,0 +1,11 @@
+<h1>All Tasks</h1>
+{% load static %}
+{% if all_task_list %}
+           <ul>
+    {% for tasks in all_task_list %}
+        <li>{{ tasks.id  }} | <a href="{% url 'task_detail' tasks.id %}">{{ tasks.name }}</a>: {{ tasks.description }}</li>
+    {% endfor %}
+       </ul>
+{% else %}
+           <p>No polls are available.</p>
+{% endif %}

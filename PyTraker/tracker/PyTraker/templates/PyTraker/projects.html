@@ -1,0 +1,11 @@
+<h1>Your Projects</h1>
+{% load static %}
+{% if all_projects %}
+           <ul>
+    {% for projects in all_projects %}
+        <li><a href="{% url 'project_detail' projects.id %}">{{ projects.name }}</a></li>
+    {% endfor %}
+       </ul>
+{% else %}
+           <p>No polls are available.</p>
+{% endif %}

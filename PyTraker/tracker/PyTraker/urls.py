@@ -11,8 +11,14 @@ urlpatterns = [
     path("PyTraker/logout", views.log_out, name="logout"),
     #path("PyTraker/invoice/<int:invoices_id>/", views.invoice_details, name ="invoice_details"),
     path("PyTraker/invoice/<int:invoices_id>/", views.invoice, name="invoice"),
+
     path("PyTraker/comments/<int:comment_id>/", views.comment_detail_view, name="comment_detail"),
     path("PyTraker/comments/", views.comment_create_view, name="comment-add"),
-    path("PyTraker/comments/<int:comment_id>/delete/", views.comment_delete, name="comment_delete")
+    path("PyTraker/comments/<int:comment_id>/delete/", views.comment_delete, name="comment_delete"),
+
+    path("PyTraker/tasklist", views.tasklist, name="tasklist"),
+    path("PyTraker/task_detail", views.task_detail, name="task_detail"),
+    path("PyTraker/projects", views.projects, name="projects"),
+    path("PyTraker/project_detail", views.project_detail, name="project_detail"),
 
 ]

@@ -84,6 +84,7 @@ def invoice(request, invoices_id):
     }
     return render(request, "PyTraker/invoice.html", context)
 
+
 #comment page
 def comment_view(request):
     obj = Comments.objects.all()
@@ -123,3 +124,25 @@ def comment_delete(request, comment_id):
         "object":obj
     }
     return render(request, "PyTraker/comment_delete.html", context)
+#Task Views
+def tasklist(request):
+    all_task_list = Tasks.objects.order_by("name")
+    context = {"all_task_list": all_task_list}
+    return render(request, "PyTraker/tasklist.html", context)
+
+
+def task_detail(request, tasks_id):
+    tasks = get_object_or_404(Tasks, pk=tasks_id)
+    return render(request, 'PyTraker/task_detail.html', {'tasks': tasks})
+
+#Project Views
+def projects(request):
+    all_projects = Projects.objects.order_by("name")
+    context = {"all_projects": all_projects}
+    return render(request, "PyTraker/projects.html", context)
+
+
+def project_detail(request, projects_id):
+    project = get_object_or_404(Projects, pk=projects_id)
+    return render(request, 'PyTraker/project_detail.html', project)
+
