@@ -1,0 +1,17 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h1>  Here is your current list of active projects {{ user }}</h1>
+{% if project_list %}
+    <div class="list-group">
+{% for project in project_list %}
+<a href="/PyTraker/details_project/{{ project.id }}" class="list-group-item list-group-item-action">{{ project.name }}</a>
+{% endfor %}
+
+</div>
+{% else %}
+<p> No projects yet!</p>
+{% endif %}
+
+{% endblock %}

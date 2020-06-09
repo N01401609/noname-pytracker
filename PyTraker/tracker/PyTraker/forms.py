@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 
-from .models import Profile,Comments, Projects
+from .models import Profile, Comments, Projects
 
 
 class UserForm(UserCreationForm):
@@ -22,6 +22,7 @@ class ProfileForm(forms.ModelForm):
 
 class CommentForm(forms.ModelForm):
     comment = forms.CharField(required=True, widget=forms.Textarea)
+
     class Meta:
         model = Comments
         fields = [

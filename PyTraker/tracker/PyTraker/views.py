@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.core.paginator import Paginator
 # Create your views here.
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -11,9 +11,16 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
 from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
 
+
 @login_required
 def home(request):
-    return render(request, 'PyTraker/index.html')
+    project_list = Projects.objects.all()
+    paginator = Paginator(project_list, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    #context = {'project_list': project_list}
+    return render(request, 'PyTraker/index.html', {'page_obj': page_obj})
+   # return render(request, 'PyTraker/index.html')
 
 
 def sign_up(request):
@@ -93,12 +100,14 @@ def comment_view(request):
     }
     return render(request, "PyTraker/comment_form.html",context)
 
+
 def comment_detail_view(request, comment_id):
     obj = Comments.objects.get(id=comment_id)
     context = {
         'comment': obj
     }
     return render(request, "PyTraker/comment_detail.html", context)
+
 
 def comment_create_view(request):
     initial_data = {
@@ -124,6 +133,8 @@ def comment_delete(request, comment_id):
         "object":obj
     }
     return render(request, "PyTraker/comment_delete.html", context)
+
+
 #Task Views
 def tasklist(request):
     all_task_list = Tasks.objects.order_by("name")
@@ -134,6 +145,7 @@ def tasklist(request):
 def task_detail(request, tasks_id):
     tasks = get_object_or_404(Tasks, pk=tasks_id)
     return render(request, 'PyTraker/task_detail.html', {'tasks': tasks})
+
 
 #Project Views
 def projects(request):
@@ -147,13 +159,9 @@ def project_detail(request, projects_id):
     return render(request, 'PyTraker/project_detail.html', project)
 
 
-#Projects
-#Projects
-
-
 def new_project(request):
     if request.method == 'POST':
-        filled_form = ProjectForm(request.POST)
+        filled_form = ProjectForm(request.POST or None)
         if filled_form.is_valid():
             created_project = filled_form.save()
             created_project_pk = created_project.id
@@ -187,12 +195,17 @@ def details_project(request, pk):
     project = get_object_or_404(Projects, pk=pk)
     return render(request, 'PyTraker/details_project.html', {'project': project})
 
+def list_projects(request):
+    project_list = Projects.objects.order_by('dueDate')
+    context = {'project_list': project_list}
+    return render(request, 'PyTraker/list_projects.html', context)
+
 
 def delete_project(request, pk):
     pk = int(pk)
     try:
         project_sel = Projects.objects.get(id=pk)
     except Projects.DoesNotExist:
-        return redirect('/PyTraker')
+        return redirect('/PyTraker/index')
     project_sel.delete()
-    return redirect('/PyTraker')
+    return redirect('/PyTraker/index')
