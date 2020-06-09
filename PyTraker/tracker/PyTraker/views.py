@@ -8,7 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm
+from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
 from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
 
 @login_required
@@ -146,3 +146,53 @@ def project_detail(request, projects_id):
     project = get_object_or_404(Projects, pk=projects_id)
     return render(request, 'PyTraker/project_detail.html', project)
 
+
+#Projects
+#Projects
+
+
+def new_project(request):
+    if request.method == 'POST':
+        filled_form = ProjectForm(request.POST)
+        if filled_form.is_valid():
+            created_project = filled_form.save()
+            created_project_pk = created_project.id
+            note = 'Your Project with %s has been added.' %(filled_form.cleaned_data['name'])
+            filled_form = ProjectForm()
+        else:
+            created_project_pk = None
+            note = "Your project was not created, please try again."
+        return render(request, 'PyTraker/new_project.html',
+                      {'created_project_pk': created_project_pk, 'new_project': filled_form, 'note': note})
+    else:
+        form = ProjectForm()
+        return render(request, 'PyTraker/new_project.html', {'new_project': form})
+
+
+def edit_project(request, pk):
+    project = Projects.objects.get(pk=pk)
+    form = ProjectForm(instance=project)
+    if request.method == "POST":
+        filled_form = ProjectForm(request.POST, instance=project)
+        if filled_form.is_valid():
+            filled_form.save()
+            form = filled_form
+            note = "Project has been updated."
+            return render(request, 'PyTraker/edit_project.html', {'note': note,'new_project': form, 'project': project})
+
+    return render(request, 'PyTraker/edit_project.html', {'new_project': form, 'project': project})
+
+
+def details_project(request, pk):
+    project = get_object_or_404(Projects, pk=pk)
+    return render(request, 'PyTraker/details_project.html', {'project': project})
+
+
+def delete_project(request, pk):
+    pk = int(pk)
+    try:
+        project_sel = Projects.objects.get(id=pk)
+    except Projects.DoesNotExist:
+        return redirect('/PyTraker')
+    project_sel.delete()
+    return redirect('/PyTraker')

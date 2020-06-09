@@ -1,3 +1,4 @@
+{% extends "PyTraker/header.html" %}
 {% if user.is_authenticated %}
 {{ request.user }} |<a href="#" onClick="document.getElementById('logoutform').submit()"><button type="button">Logout</button></a>
 <form id="logoutform" method="POST" action="{% url 'PyTraker:logout' %}">
@@ -9,3 +10,33 @@
 {% endif %}
 
 <h1> Welcome {{user}} </h1>
+
+
+{% block content %}
+
+
+<h1> Welcome {{user}}, here is a list of your current list of projects  </h1>
+
+{% if project_list %}
+    <div class="card-deck">
+         {% for project in project_list %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+          <div class="card-header">Project # {{ project.id }}</div>
+            <div class="card-body text-dark">
+            <h5 class="card-title"><a href="{% url 'details_project' project.id %}">{{ project.name }}</a></h5>
+            <p class="card-text">Client: {{ project.description }}</p>
+            <p class="card-text">Due: {{ project.dueDate.date }}</p>
+        </div>
+        </div>
+     {% endfor %}
+    </div>
+
+{% else %}
+<p> No projects yet!</p>
+{% endif %}
+    <div>
+<p>Would you like to add a new project?</p>
+<a class="btn btn-success" href= "PyTraker/new_project">New Project</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+    <br><br>
+        <a href="{% url 'home'  %}">Back</a>
+<div class="container">
+<div class="card">
+  <h5 class="card-header">Project Details for: {{ project.name }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Client: {{ project.clientID }}</h5>
+    <p class="card-text">Description: {{ project.description }}</p>
+          <p class="card-text">Start Date: {{ project.startDate.date }}</p>
+          <p class="card-text">Due Date: {{ project.dueDate.date }}</p>
+          <p class="card-text">Rate: ${{ project.payRate }}</p>
+
+
+
+    <a href="{% url 'edit_project' project.id %}" class="btn btn-warning">Edit</a>
+  </div>
+</div>
+</div>
+{% endblock %}

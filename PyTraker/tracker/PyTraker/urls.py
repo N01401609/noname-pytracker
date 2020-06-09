@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'PyTraker'
 urlpatterns = [
-    path('', views.home, name="home"),
+   # path('', views.home, name="home"),
     path('PyTraker/index', views.home, name="home"),
     path('PyTraker/sign_up/', views.sign_up, name="sign_up"),
     path('PyTraker/login', views.login_page, name="login"),
@@ -20,5 +20,11 @@ urlpatterns = [
     path("PyTraker/task_detail", views.task_detail, name="task_detail"),
     path("PyTraker/projects", views.projects, name="projects"),
     path("PyTraker/project_detail", views.project_detail, name="project_detail"),
+
+    path('PyTraker/new_project', views.new_project, name='new_project'),
+    path('PyTraker/edit_project/<int:pk>', views.edit_project, name='edit_project'),
+    path('PyTraker/details_project/<int:pk>', views.details_project, name='details_project'),
+    path('PyTraker/delete_project/<int:pk>', views.delete_project, name='delete_project'),
+
 
 ]
