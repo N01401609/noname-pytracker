@@ -14,11 +14,17 @@
 <!-- for django to stop the if else analysis -->
 {% endif %}
 <h2>Add your comments here!</h2>
+{{ userid }}
+{{ i }}
+{{ time }}
 {% block content %}
-<form method="post" action="">
+<form method="POST" action="">
     {% csrf_token %}
-    User : {{ user }}
-    {{ form.as_p }}
+    <input type="hidden" id="id_user" name="user" value="{{ userid }}" />
+    <input type="hidden" id="id_comment_date" name="comment_date" value="{{ time }}" />
+<!--    {{ form.as_p }}-->
+    <label>Comment:</label>
+    <textarea name="comment" id="id_comment"></textarea>
     <input type="submit" value="Comment" />
 </form>
 {% endblock %}

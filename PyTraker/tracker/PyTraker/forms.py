@@ -4,6 +4,11 @@ from django import forms
 
 from .models import Profile,Comments
 
+# for import date and time
+from _datetime import datetime
+from django.utils import timezone
+from django.template import defaultfilters
+
 
 class UserForm(UserCreationForm):
 
@@ -21,18 +26,13 @@ class ProfileForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
-    comment = forms.CharField(required=True, widget=forms.Textarea)
     class Meta:
         model = Comments
         fields = [
             'user',
             'comment',
-            'comment_date'
+            'comment_date',
         ]
-
-    def clean_title(self):
-        user = self.cleaned_data.get("user")
-
 class CommentRawProduction(forms.Form):
     user = forms.CharField()
     comment = forms.CharField(required=True, widget=forms.Textarea)

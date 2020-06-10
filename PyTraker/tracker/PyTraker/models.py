@@ -3,8 +3,7 @@ from django.db import models
 
 
 # Create your models here.
-import datetime
-from django.utils import timezone
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -16,7 +15,7 @@ class Profile(models.Model):
 class Comments(models.Model):
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     comment = models.CharField(max_length=2000)
-    comment_date = models.DateTimeField('commented date')
+    comment_date = models.DateTimeField()
 
 class Clients(models.Model):
     name = models.CharField(max_length=50)
