@@ -26,10 +26,7 @@ class ProfileForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
-
     comment = forms.CharField(required=True, widget=forms.Textarea)
-
-
     class Meta:
         model = Comments
         fields = [
@@ -38,8 +35,7 @@ class CommentForm(forms.ModelForm):
             'comment_date',
         ]
 
-
-    def clean_title(self):
+    def clean_user(self, *args, **kwargs):
         user = self.cleaned_data.get("user")
 
 

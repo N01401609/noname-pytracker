@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 
-from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm
+from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
 from .models import Invoices, Projects, Clients, Tasks, Timers, Comments,Profile
 
 # for import date and time
@@ -19,12 +19,6 @@ from django.template import defaultfilters
 from django.utils.dateparse import parse_date
 
 
-
-from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
-from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
-
-
-
 @login_required
 def home(request):
     project_list = Projects.objects.all()
@@ -32,7 +26,9 @@ def home(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     #context = {'project_list': project_list}
+
     return render(request, 'PyTraker/index.html', {'page_obj': page_obj})
+
    # return render(request, 'PyTraker/index.html')
 
 
@@ -66,7 +62,7 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('login')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
@@ -124,22 +120,22 @@ def comment_detail_view(request, comment_id):
 
 def comment_create_view(request):
     if request.method == "POST":
-        # new_comment = CommentForm()
-        new_comment_user = request.POST.get('user')
-        new_comment_comment = request.POST.get('comment')
-        new_comment_comment_date = parse_date(request.POST.get('comment_date'))
-        # print(parse_date(request.POST.get('comment_date')))
-        Comments.objects.create(user=new_comment_user,comment=new_comment_comment,comment_date=new_comment_comment_date)
+        new_comment = CommentForm()
+        current_user = request.user
+        my_p = User.objects.get(id=current_user.id)
+        new_comment.user = my_p
+        new_comment.comment = request.POST.get('comment')
+        #new_comment.comment_date = parse_date(request.POST.get('comment_date'))
+        new_comment.comment_date = datetime.now()
+        print(new_comment.user)
+        print(new_comment.comment_date)
+        print(new_comment.comment)
+        Comments.objects.create(user=new_comment.user,comment=new_comment.comment,comment_date=new_comment.comment_date)
     comments = Comments.objects.all()
     date = datetime.now()
-    userid = Profile.objects.get(id=1)
-    m = User.objects.get(id=request.user.id)
-    i = m.username
     context = {
-        'm':m,
-        'userid': userid,
         'object': comments,
-        'time' : defaultfilters.date(date, "Y-m-d")
+        'time' : defaultfilters.date(date, "Y-m-d h:i A")
     }
     return render(request, "PyTraker/comment_form.html", context)
 

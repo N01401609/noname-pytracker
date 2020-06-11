@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from .models import Profile, Projects, Clients, Invoices, Tasks, Comments
 
-from .models import Profile, Projects, Clients, Invoices, Tasks, Timers, TaskNotes, ProjectNotes
+from .models import Profile, Projects, Clients, Invoices, Tasks, Timers, TaskNotes, ProjectNotes, WorkDiary
 
 admin.site.register(Profile)
 
@@ -24,4 +24,6 @@ admin.site.register(Timers)
 admin.site.register(TaskNotes)
 
 admin.site.register(ProjectNotes)
+
+admin.site.register(WorkDiary)
 
