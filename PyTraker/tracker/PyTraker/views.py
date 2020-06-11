@@ -19,7 +19,9 @@ def home(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     #context = {'project_list': project_list}
+
     return render(request, 'PyTraker/index.html', {'page_obj': page_obj})
+
    # return render(request, 'PyTraker/index.html')
 
 
@@ -53,7 +55,7 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('login')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
