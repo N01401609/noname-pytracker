@@ -1,0 +1,26 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h1>Edit Project</h1>
+    <a href="/PyTraker/details_project/{{ project.id }}">Back</a>
+    <div class="container">
+<h2>{{ note }}</h2>
+
+<form action="/PyTraker/edit_project/{{ project.id }}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ new_project.as_table }}
+        </table>
+    <input type="submit" value="Edit" class="btn btn-warning">
+    <a href="/PyTraker/delete_project/{{ project.id }}"  class="btn btn-danger"  id ='{{project.id}}'>Delete</a>
+
+</form>
+
+    </div>
+
+
+
+
+
+{% endblock %}

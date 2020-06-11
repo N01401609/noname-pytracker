@@ -1,0 +1,23 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+   <h1>New Project</h1>
+<h2>{{ note }}</h2>
+    <div class="container">
+{% if created_project_pk %}
+<a href="/PyTraker/edit_project/{{ created_project_pk }}">EDIT</a>
+{% endif %}
+<form action="/PyTraker/new_project" method="post">
+    {% csrf_token %}
+        {{ new_project.as_p }}
+
+    <input class="btn btn-success" type="submit" value="Add">
+    <a class="btn btn-danger" href="/PyTraker/index">Cancel</a>
+
+</form>
+
+
+    </div>
+
+{% endblock %}
+
