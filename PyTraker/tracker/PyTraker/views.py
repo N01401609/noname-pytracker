@@ -8,7 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
+from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm, InvoiceForm
 from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
 
 
@@ -72,20 +72,21 @@ def log_out(request):
     return redirect('login')
 
 
-# Invoice View
-
+# Invoice Views
 def invoice(request, invoices_id):
     obj = Invoices.objects.get(id=invoices_id)
     tasks = Tasks.objects.filter(projectID_id=obj.projectID)
     context = {
         'invoice_id': obj.id,
+        'project_id': obj.projectID,
+        'project_name':obj.projectID.name,
         'client_name': obj.projectID.clientID.name,
         'client_email': obj.projectID.clientID.email,
         'client_phone': obj.projectID.clientID.phone,
-        'user_fname': obj.userID.firstname,
-        'user_lname': obj.userID.lastname,
+        #'user_fname': obj.userID.firstname,
+        #'user_lname': obj.userID.lastname,
         'user_email': obj.userID.email,
-        'user_phone': obj.userID.phonenumber,
+        #'user_phone': obj.userID.phonenumber,
         'date_created': obj.dateCreated,
         'date_due': obj.dueDate,
         'hourly_rate': obj.projectID.payRate,
@@ -93,6 +94,34 @@ def invoice(request, invoices_id):
     }
     return render(request, "PyTraker/invoice.html", context)
 
+def invoice_list (request):
+    all_invoices = Invoices.objects.order_by("-dateCreated")
+    context = {"all_invoices": all_invoices}
+    return render(request, "PyTraker/list_invoice.html", context)
+
+def new_invoice(request):
+        invoice_form = InvoiceForm(request.POST or None)
+        #Checking if the form is valid
+        if invoice_form.is_valid():
+            invoice_form.save()
+            invoice_form = InvoiceForm()
+        context = {
+            'invoice_form': invoice_form
+        }
+        return render(request, "PyTraker/new_invoice.html", context)
+
+def edit_invoice(request, invoices_id):
+    invoice =  Invoices.objects.get(pk=invoices_id)
+    form = InvoiceForm(instance=invoice)
+    if request.method == "POST":
+        populated_form = InvoiceForm(request.POST, instance=invoice)
+        if populated_form.is_valid():
+            populated_form.save()
+            form = populated_form
+            note = "Invoice has been updated."
+            return render(request, 'PyTraker/edit_invoice.html', {'note': note,'invoice_form': form, 'invoice': invoice})
+
+    return render(request, 'PyTraker/edit_invoice.html', {'invoice_form': form, 'invoice': invoice})
 
 #comment page
 def comment_view(request):

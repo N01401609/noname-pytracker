@@ -78,6 +78,9 @@ class Invoices(models.Model):
     dateCreated = models.DateTimeField()
     dueDate = models.DateTimeField()
 
+    def __str__(self):
+        return self.projectID.name
+
 
 class WorkDiary(models.Model):
     userID = models.ForeignKey(User, on_delete=models.CASCADE)

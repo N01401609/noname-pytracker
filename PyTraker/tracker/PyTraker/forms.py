@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 
-from .models import Profile, Comments, Projects
+from .models import Profile, Comments, Projects, Invoices, Clients
 
 
 class UserForm(UserCreationForm):
@@ -59,3 +59,12 @@ class ProjectForm(forms.ModelForm):
         fields = ['name', 'description', 'clientID', 'payRate', 'startDate', 'dueDate']
         labels = {'name': 'Name', 'description': 'Description', 'clientID': 'Client', 'payRate': 'Pay Rate',
                   'startDate': 'Start Date', 'dueDate': 'Due Date'}
+
+
+class InvoiceForm(forms.ModelForm):
+    class Meta:
+        model = Invoices
+        fields = ['userID',
+                  'projectID',
+                  'dateCreated',
+                  'dueDate']

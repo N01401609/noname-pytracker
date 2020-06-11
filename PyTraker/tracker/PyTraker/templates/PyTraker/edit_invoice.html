@@ -1,0 +1,24 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h1>Edit Invoice</h1>
+    <a href="/PyTraker/invoice/{{ invoice.id }}">Back</a>
+    <div class="container">
+        <h2>{{ note }}</h2>
+
+        <form action="/PyTraker/edit_invoice/{{ invoice.id }}/" method="post">
+        {% csrf_token %}
+        {{ invoice_form.as_p }}
+        <input type="submit" value="Update" class="btn btn-warning">
+        <a href="/PyTraker/delete_invoice/{{ invoice.id }}/"  class="btn btn-danger"  id ='{{invoice.id}}'>Delete</a>
+
+        </form>
+
+    </div>
+
+
+
+
+
+{% endblock %}
