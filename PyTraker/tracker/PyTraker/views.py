@@ -11,6 +11,15 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm, InvoiceForm
 from .models import Invoices, Projects, Clients, Tasks, Timers, Comments
 
+from .forms import UserForm, ProfileForm, CommentRawProduction, CommentForm, ProjectForm
+from .models import Invoices, Projects, Clients, Tasks, Timers, Comments,Profile
+
+# for import date and time
+from _datetime import datetime
+from django.utils import timezone
+from django.template import defaultfilters
+from django.utils.dateparse import parse_date
+
 
 @login_required
 def home(request):
@@ -141,17 +150,23 @@ def comment_detail_view(request, comment_id):
 
 
 def comment_create_view(request):
-    initial_data = {
-        'user': request.user.is_authenticated
-    }
-    my_form = CommentForm(request.POST or None, initial=initial_data)
+    if request.method == "POST":
+        new_comment = CommentForm()
+        current_user = request.user
+        my_p = User.objects.get(id=current_user.id)
+        new_comment.user = my_p
+        new_comment.comment = request.POST.get('comment')
+        #new_comment.comment_date = parse_date(request.POST.get('comment_date'))
+        new_comment.comment_date = datetime.now()
+        print(new_comment.user)
+        print(new_comment.comment_date)
+        print(new_comment.comment)
+        Comments.objects.create(user=new_comment.user,comment=new_comment.comment,comment_date=new_comment.comment_date)
     comments = Comments.objects.all()
-    if my_form.is_valid():
-       my_form.save()
-       my_form = CommentForm()
+    date = datetime.now()
     context = {
-       'form': my_form,
-        'object':comments
+        'object': comments,
+        'time' : defaultfilters.date(date, "Y-m-d h:i A")
     }
     return render(request, "PyTraker/comment_form.html", context)
 

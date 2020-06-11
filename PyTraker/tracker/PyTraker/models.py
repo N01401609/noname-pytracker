@@ -2,8 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-import datetime
-from django.utils import timezone
+
 
 
 class Profile(models.Model):
@@ -13,11 +12,6 @@ class Profile(models.Model):
     phonenumber = models.CharField(verbose_name="phone number", max_length=10)
     email = models.CharField(verbose_name="email", max_length=100)
 
-
-class Comments(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment = models.CharField(max_length=2000)
-    comment_date = models.DateTimeField('commented date')
 
 
 class Clients(models.Model):
@@ -90,3 +84,9 @@ class WorkDiary(models.Model):
     projectNotesID = models.ForeignKey(ProjectNotes, on_delete=models.CASCADE)
     taskID = models.ForeignKey(Tasks, on_delete=models.CASCADE)
     taskNotesID = models.ForeignKey(TaskNotes, on_delete=models.CASCADE)
+
+class Comments(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=2000)
+    comment_date = models.DateTimeField()
+    workdiary = models.ForeignKey(WorkDiary, on_delete=models.CASCADE, default='1')
