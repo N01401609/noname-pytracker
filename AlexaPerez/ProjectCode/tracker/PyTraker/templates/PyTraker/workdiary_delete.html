@@ -1,0 +1,11 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+<div class="container">
+    Are you sure you want to delete " {{ workdiary.name }} " ?
+
+    <a href="/PyTraker/workdiary_conf_delete/{{ workdiary.id }}"  class="btn btn-danger"  id ='{{ workdiary.id }}'>Delete</a>
+    <a href="/PyTraker/workdiary" class="btn btn-primary" >Cancel</a>
+
+</div>
+{% endblock %}

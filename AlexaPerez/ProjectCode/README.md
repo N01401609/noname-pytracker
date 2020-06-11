@@ -10,7 +10,7 @@ Could create a freelance work tracking system, with a timer that can track hours
 ## Work Diary
 >Team Member: Alexa
 
-This feature will consist of a dashboard(summary) of the user which will be divided by day, and on each Day Work Diary will be divided by features(tasks, post-it, click count, etc). The user will be able to add, delete or update each  work diary to reflect the history of what was done on that day. This will help the user to organize their work by day and see what has been done each day in a synthesized version.
+This feature will consist of a dashboard(summary) of the user which will be divided by day, and on each Day Work Diary will be divided by features(projects, tasks, notes, etc). The user will be able to add, delete or update each  work diary to reflect the history of what was done on that day on a project. This will help the user to organize their work by day and see what has been done each day in a synthesized version.
 
 ## Login and Registration
 >Team Member: Alexa

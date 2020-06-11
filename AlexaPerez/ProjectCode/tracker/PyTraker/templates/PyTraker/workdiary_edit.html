@@ -1,0 +1,16 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h2>Edit Work Diary </h2>
+    <div class="container">
+        <form action="/PyTraker/workdiary_edit/{{ workdiary.id }}" method="post">
+            {% csrf_token %}
+            {{ workdiary_edit.as_p }}
+            <input type="submit" value="Edit" class="btn btn-success">
+            <a href="/PyTraker/workdiary_delete/{{ workdiary.id }}"  class="btn btn-danger"  id ='{{workdiary.id}}'>Delete</a>
+            <a href="/PyTraker/workdiary_detail/{{ workdiary.id }}" class="btn btn-primary" >Cancel</a>
+        </form>
+    </div>
+
+{% endblock %}

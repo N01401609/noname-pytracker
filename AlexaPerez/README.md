@@ -31,8 +31,17 @@
 
 ### Task List (Week 4)
 
+- [x] Continue working on Feature 2
+- [x] Get Views and forms done for Work Diary
+
+
+### Task Status
+- Completed
+
+### Task List (Week 5)
+
 - [ ] Continue working on Feature 2
-- [ ] Get Views and forms done for Work Diary
+- [ ] Work on user auth on pages
 
 
 ### Task Status

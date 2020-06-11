@@ -25,6 +25,12 @@ urlpatterns = [
     path("PyTraker/edit_project/<int:pk>", views.edit_project, name="edit_project"),
     path("PyTraker/details_project/<int:pk>", views.details_project, name="details_project"),
     path("PyTraker/delete_project/<int:pk>", views.delete_project, name="delete_project"),
-    path("PyTraker/list_projects", views.list_projects, name="list_projects")
+    path("PyTraker/list_projects", views.list_projects, name="list_projects"),
+    path("PyTraker/workdiary", views.workdiary, name="workdiary"),
+    path("PyTraker/workdiary_add", views.workdiary_add, name="workdiary_add"),
+    path("PyTraker/workdiary_edit/<int:pk>", views.workdiary_edit, name="workdiary_edit"),
+    path("PyTraker/workdiary_detail/<int:pk>", views.workdiary_details, name="workdiary_detail"),
+    path("PyTraker/workdiary_delete/<int:pk>", views.workdiary_delete, name="workdiary_delete"),
+    path("PyTraker/workdiary_conf_delete/<int:pk>", views.workdiary_conf_delete, name="workdiary_conf_delete")
 
 ]
