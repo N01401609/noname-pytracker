@@ -44,11 +44,6 @@ class Tasks(models.Model):
         return self.name
 
 
-class Timers(models.Model):
-    startTime = models.DateTimeField()
-    endTime = models.DateTimeField()
-    taskID = models.ForeignKey(Tasks, on_delete=models.CASCADE)
-
 
 class TaskNotes(models.Model):
     note = models.TextField(max_length=250)
@@ -65,6 +60,10 @@ class ProjectNotes(models.Model):
     def __str__(self):
         return self.note
 
+class Timers(models.Model):
+    startTime = models.DateTimeField()
+    endTime = models.DateTimeField()
+    Project = models.ForeignKey(Projects, on_delete=models.CASCADE, default='1')
 
 class Invoices(models.Model):
     userID = models.ForeignKey(User, on_delete=models.CASCADE)

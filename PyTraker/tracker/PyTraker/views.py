@@ -127,9 +127,9 @@ def comment_create_view(request):
         new_comment.comment = request.POST.get('comment')
         #new_comment.comment_date = parse_date(request.POST.get('comment_date'))
         new_comment.comment_date = datetime.now()
-        print(new_comment.user)
-        print(new_comment.comment_date)
-        print(new_comment.comment)
+        #print(new_comment.user)
+        #print(new_comment.comment_date)
+        #print(new_comment.comment)
         Comments.objects.create(user=new_comment.user,comment=new_comment.comment,comment_date=new_comment.comment_date)
     comments = Comments.objects.all()
     date = datetime.now()
@@ -171,7 +171,13 @@ def projects(request):
 
 def project_detail(request, projects_id):
     project = get_object_or_404(Projects, pk=projects_id)
-    return render(request, 'PyTraker/project_detail.html', project)
+    date = datetime.now()
+    context ={
+        'project': project,
+        'time': defaultfilters.date(date, "Y-m-d h:i A"),
+    }
+
+    return render(request, 'PyTraker/project_detail.html', context)
 
 
 def new_project(request):
@@ -208,7 +214,13 @@ def edit_project(request, pk):
 
 def details_project(request, pk):
     project = get_object_or_404(Projects, pk=pk)
-    return render(request, 'PyTraker/details_project.html', {'project': project})
+    date = datetime.now()
+    context = {
+        'project':project,
+        'time':defaultfilters.date(date, "Y, m, d, h, i, s"),
+        'stime':datetime.now()
+    }
+    return render(request, 'PyTraker/details_project.html', context)
 
 def list_projects(request):
     project_list = Projects.objects.order_by('dueDate')

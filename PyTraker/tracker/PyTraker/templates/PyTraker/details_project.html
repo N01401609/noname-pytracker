@@ -1,6 +1,51 @@
 {% extends "PyTraker/header.html" %}
 
+
 {% block content %}
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script>
+function startTime() {
+    sTime = typeof sTime !== 'undefined' ? sTime : 0;
+    nowDateInput = $('#todaydate').html(); // 2014, 07, 02, 08, 14, 35
+    mydate = $('#date').html(); // 2014, 07, 02, 08, 14, 35
+    document.getElementById('stime').innerHTML = mydate;
+    nn = nowDateInput.split(',');
+    if (nn[1] == 0) {
+        nn[1] = 12;
+    } else {
+        nn[1] = nn[1] - 1;
+    }
+    today = new Date(nn[0], nn[1], nn[2], nn[3], nn[4], nn[5]);
+    today.setSeconds(today.getSeconds()+sTime);
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
+    var t = setTimeout(function(){startTime(sTime)},1000);
+    sTime = sTime + 1;
+}
+function checkTime(i) {
+    if (i<10) {i = "0" + i};
+    return i;
+}
+function stopTime(){
+    clearTimeout();
+}
+</script>
+<div>
+    <div id="todaydate" style="display:none">{{ time }}</div>
+    <div id="date" style="display:none">{{ stime }}</div>
+    <div id="clock"></div>
+    <button onclick="startTime()">Start Time</button>
+    <button onclick="stopTime()">Stop Time</button>
+    <form>
+        <label>Start Time:</label>
+        <span id="stime"></span>
+    </form>
+
+</div>
     <br><br>
         <a href="/PyTraker/index">Home</a>
 <div class="container">
