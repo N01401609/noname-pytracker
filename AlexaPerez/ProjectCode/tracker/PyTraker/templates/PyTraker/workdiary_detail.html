@@ -1,0 +1,28 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Work Diary Details for: {{ workdiary.name }}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Project: {{ workdiary.projectID.name }}</h5>
+      <p class="card-text">Date: {{ workdiary.date }}</p>
+      <p class="card-text">Project Notes: {{ workdiary.projectNotesID.note }}</p>
+      <p class="card-text">Task: {{ workdiary.taskID.name }}</p>
+      <p class="card-text">Task Notes: {{ workdiary.taskNotesID.note }}</p>
+
+      <h5 class="card-title">Comments:</h5>
+      <p class="card-text"> comments....</p>
+
+
+
+      <a href="/PyTraker/workdiary_edit/{{ workdiary.id }}" class="btn btn-warning">Edit</a>
+      <a href="/PyTraker/workdiary_delete/{{ workdiary.id }}"  class="btn btn-danger"  id ='{{workdiary.id}}'>Delete</a>
+      <a href="/PyTraker/workdiary" class="btn btn-primary" >Back</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

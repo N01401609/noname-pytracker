@@ -1,6 +1,9 @@
-{% extends 'PyTraker/base.html' %}
+{% extends "PyTraker/header.html" %}
 {% block content %}
-    <h1>Invoices</h1>
+<a href="/PyTraker/edit_invoice/{{ invoice_id }}" class="btn btn-warning">Edit</a>
+    <a href="/PyTraker/delete_invoice/{{ invoice_id }}"  class="btn btn-danger"  id ='{{project.id}}'>Delete</a>
+    <!-- If the inovice exists do this-->
+    <h1>Invoice {{ project_name }}</h1>
     <!-- Invoice Information-->
     <div style="padding-bottom: 2em;">
         <div>Invoice #{{ invoice_id }}</div>

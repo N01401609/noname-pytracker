@@ -1,0 +1,89 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Work Diary Details for: {{ workdiary.name }}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Project: {{ workdiary.projectID.name }}</h5>
+      <p class="card-text">Date: {{ workdiary.date }}</p>
+      <p class="card-text">Project Notes: {{ workdiary.projectNotesID.note }}</p>
+      <p class="card-text">Task: {{ workdiary.taskID.name }}</p>
+      <p class="card-text">Task Notes: {{ workdiary.taskNotesID.note }}</p>
+
+      <div class="container">
+    <div class="row">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-comment"></span>
+                <h3 class="panel-title">
+                    Recent Comments</h3>
+            </div>
+            {% if object %}
+                {% for comment in object %}
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="/PyTraker/comments/{{ comment.id }}">
+                                        {{ comment.comment }}</a>
+                                    <div class="mic-info">
+                                        By: <a href="#">{{ comment.user }}</a> on {{ comment.comment_date }}
+                                    </div>
+                                </div>
+                                <div class="action">
+<!--                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">-->
+<!--                                        <span class="glyphicon glyphicon-pencil"></span>-->
+<!--                                    </button>-->
+
+                                    {% if comment.user == user %}
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                        <a href="/PyTraker/comments/{{ comment.id }}/delete/"><span class="glyphicon glyphicon-trash">X</span></a>
+                                    </button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            {% endfor %}
+{% else %}
+<h2>You don't have any comment for display </h2>
+<!-- for django to stop the if else analysis -->
+{% endif %}
+  <div class="input-group input-group-lg" style="width:1000px">
+  <div class="input-group-prepend">
+      <!--<h3><span class="input-group-text" id="inputGroup-sizing-lg"></span></h3>-->
+  </div>
+      <form method="POST" action="">
+    {% csrf_token %}
+<!--    {{ form.as_p }}-->
+    <label>Comment:</label>
+<!--    <textarea name="comment" id="id_comment"></textarea>-->
+          <input type="text" class="form-control" name="comment" id="id_comment">
+    <input class="btn btn-success" type="submit" value="Share" />
+</form>
+
+</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+      <a href="/PyTraker/workdiary_edit/{{ workdiary.id }}" class="btn btn-warning">Edit</a>
+      <a href="/PyTraker/workdiary_delete/{{ workdiary.id }}"  class="btn btn-danger"  id ='{{workdiary.id}}'>Delete</a>
+      <a href="/PyTraker/workdiary" class="btn btn-primary" >Back</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

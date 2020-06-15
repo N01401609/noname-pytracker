@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Work Diary</title>
-</head>
-<body>
-<h1> Welcome {{user}} </h1>
-</body>
-</html>
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h1>List of {{ user }}'s Work Diaries</h1>
+    {% if all_workdiary %}
+        <div class="list-group">
+        {% for workdiary in all_workdiary %}
+        <a href="/PyTraker/workdiary_detail/{{ workdiary.id }}" class="list-group-item list-group-item-action">{{ workdiary.name }} | {{ workdiary.projectID.name }} | {{workdiary.date }}</a>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p> No Work Diaries yet!</p>
+    {% endif %}
+
+<a class="btn btn-success" href= "/PyTraker/workdiary_add">Add Work Diary</a>
+{% endblock %}

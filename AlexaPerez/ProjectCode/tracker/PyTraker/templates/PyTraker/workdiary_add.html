@@ -1,0 +1,16 @@
+{% extends "PyTraker/header.html" %}
+
+{% block content %}
+
+<h2>New Work Diary</h2>
+    <div class="container">
+        <form action="/PyTraker/workdiary_add" method="post">
+            {% csrf_token %}
+            {{ workdiary_add.as_p }}
+            <input class="btn btn-success" type="submit" value="Add">
+            <a class="btn btn-danger" href="/PyTraker/workdiary">Cancel</a>
+        </form>
+    </div>
+
+{% endblock %}
+
